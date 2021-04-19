@@ -9,8 +9,12 @@ import { outsideGrid } from './grid.js';
 let main = (currentTime) => {
 
     if (gameOver) {
+        dieSound.play();
+        dieSound.setVolume(0.4);
+        song.stop();
         if (confirm('You lost. Press ok to restart.')) {
             window.location = '/'
+            getAudioContext().resume();
         }
         return
     }

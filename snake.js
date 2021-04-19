@@ -30,6 +30,8 @@ export let draw = (gameBoard) => {
 
 export let expandSnake = (amount) => {
     newSegments += amount;
+    foodSound.play();
+    foodSound.setVolume(0.5);
 }
 
 export let onSnake = (position, { ignoreHead = false } = {}) => {
