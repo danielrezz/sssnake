@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classic Snake Game</title>
+    <title>sssSnake!</title>
     <style>
         body {
             min-height: 100vh;
@@ -14,6 +14,7 @@
             align-items: center;
             margin: 0;
             background-color: rgb(49, 49, 49);
+            position: relative;
         }
 
         #game-board {
@@ -23,6 +24,7 @@
             display: grid;
             grid-template-rows: repeat(21, 1fr);
             grid-template-columns: repeat(21, 1fr);
+            position: absolute;
         }
 
         .snake {
@@ -32,18 +34,55 @@
         }
 
         .food {
-            background-color: rgb(243, 93, 139);
-            border: .5vmin solid rgb(255, 217, 0);
+            background-color: rgb(255, 217, 0);
+            border: .5vmin solid black;
             border-radius: 50%;
         }
+
+        #start-text {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            top: 20%;
+            position: absolute;
+            z-index: 1;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1rem;
+        }
+
+        #score-text {
+            z-index: 1;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            color: white;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1rem;
+            bottom: 2%;
+            left: 5%;
+            opacity: 0.5;
+            color: red;
+        }
+
     </style>
     <script defer src=https://cdn.JsDelivr.net/npm/p5></script>
     <script defer src=https://cdn.JsDelivr.net/npm/p5/lib/addons/p5.dom.min.js></script>
     <script defer src=https://cdn.JsDelivr.net/npm/p5/lib/addons/p5.sound.min.js></script>
     <script src="sketch.js"></script>
     <script src="game.js" defer type="module"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <div id="start-text">
+        <h1>Press any key to begin!</h1>
+    </div>
+
+    <div id="score-text">
+        <h1>Score: <span id="score-count">0</span></h1>
+    </div>
 
     <div id="game-board"></div>
     

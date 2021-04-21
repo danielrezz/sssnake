@@ -10,10 +10,16 @@ function preload() {
 
 function setup() {
     song.play();
-    song.loop();
+}
+
+function hideStartText() {
+  console.log("hello");
+  let text = document.getElementById('start-text');
+    text.style.display = "none";
 }
 
 function keyPressed() {
+  hideStartText();
     if (getAudioContext().state !== 'running') {
       getAudioContext().resume();
     }

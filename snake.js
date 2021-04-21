@@ -28,10 +28,19 @@ export let draw = (gameBoard) => {
     })
 }
 
+let addScore = () => {
+    let currentScore = document.querySelector('#score-count').innerHTML;
+    currentScore++;
+    let newScore = currentScore;
+    return document.querySelector('#score-count').innerHTML = newScore;
+    
+}
+
 export let expandSnake = (amount) => {
     newSegments += amount;
     foodSound.play();
     foodSound.setVolume(0.5);
+    addScore();
 }
 
 export let onSnake = (position, { ignoreHead = false } = {}) => {
