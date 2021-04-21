@@ -10,7 +10,7 @@
     Here is the classic Snake game that I wanted to learn how to make for some Javascript practice. I followed along with a Youtube video on how to set the game up using vanilla Javascript. Once that was complete, I put a little bit of my own spin on it.
 </p>
 
-<img src="Screen Shot 2020-12-07 at 10.33.46 PM.png">
+<img src="Screen Shot 2021-04-20 at 10.20.19 PM.jpeg">
 
 <p>
     The classic Snake game with new colors, sounds, and custom music.
