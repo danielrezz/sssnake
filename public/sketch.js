@@ -3,9 +3,9 @@ let foodSound;
 let dieSound;
 
 function preload() {
-    song = loadSound("snake song.mp3");
-    foodSound = loadSound("EAT.mp3");
-    dieSound = loadSound("DIE.mp3");
+    song = loadSound("./public/snake song.mp3");
+    foodSound = loadSound("./public/EAT.mp3");
+    dieSound = loadSound("./public/DIE.mp3");
 }
 
 function setup() {
@@ -13,7 +13,6 @@ function setup() {
 }
 
 function hideStartText() {
-  console.log("hello");
   let text = document.getElementById('start-text');
     text.style.display = "none";
 }

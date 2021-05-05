@@ -11,10 +11,7 @@ app.set('view engine', 'html');
 
 app.engine('html', require('ejs').renderFile);
 
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use("/public", express.static("./public"));
-}
+app.use("/public", express.static("./public"));
 
 app.get('/', function (req, res) {
     res.render('index.html', {});
